@@ -1,6 +1,8 @@
 src/bower_components/
 node_modules/
 target/
+jscover.log
+jscover.log.lck
 
 #################
 ## Eclipse
