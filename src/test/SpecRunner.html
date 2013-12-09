@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Test Example</title>
+    <script src="lib/jasmine/jasmine.js"></script>
+    <script src="lib/jasmine/jasmine-html.js"></script>
+
+    <!-- include third partyy libraires... -->
+    <script src="../bower_components/jQuery/jquery.min.js"></script>
+
+    <!-- include source files here... -->
+    <script src="../app/app.js"></script>
+
+    <!-- include spec files here... -->
+    <script type="text/javascript" src="spec/appSpec.js"></script>
+
+
+    <link rel="stylesheet" href="lib/jasmine/jasmine.css">
+    
+    
+    <style>
+        div.black {
+          color: black;
+        }
+        div.red {
+          color: red;
+          font-weight: bold;
+        }
+    </style>
+
+    <script type="text/javascript">
+    (function() {
+      var jasmineEnv = jasmine.getEnv();
+      jasmineEnv.updateInterval = 1000;
+
+      var htmlReporter = new jasmine.HtmlReporter();
+
+      jasmineEnv.addReporter(htmlReporter);
+
+      jasmineEnv.specFilter = function(spec) {
+        return htmlReporter.specFilter(spec);
+      };
+
+      var currentWindowOnload = window.onload;
+
+      window.onload = function() {
+        if (currentWindowOnload) {
+          currentWindowOnload();
+        }
+        execJasmine();
+      };
+
+      function execJasmine() {
+        jasmineEnv.execute();
+      }
+
+    })();
+  </script>
+    </head>
+<body>
+    <div id="request" class="red">Please select your favorite number:</div>
+    <input type="radio" name="number" id="radio1" ><label for="radio1">One</label><br>
+    <input type="radio" name="number" id="radio2" ><label for="radio2">Two</label><br>
+    <input type="radio" name="number" id="radio3" ><label for="radio3">Three</label><br>
+    <input type="radio" name="number" id="radio4" ><label for="radio4">Four</label><br>
+    <div id="result" class="red"></div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "js-coverage-test",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "grunt": "~0.4.2",
+    "phantomjs": "~1.9.2-5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Boussadia/js-coverage-test.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/Boussadia/js-coverage-test/issues"
+  }
+}
